@@ -12,6 +12,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^2.1.0
 
+  # Widgets
+  badges: ^2.0.1
+
   # Utils
   vrouter: ^1.2.0+6
   dio: ^4.0.0

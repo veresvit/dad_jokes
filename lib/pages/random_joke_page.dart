@@ -1,7 +1,8 @@
+import 'package:dad_jokes_demo/data/blocs/favorites_bloc/favorites_bloc.dart';
 import 'package:dad_jokes_demo/data/blocs/random_joke_bloc/random_joke_bloc.dart';
 import 'package:dad_jokes_demo/data/client/app_client.dart';
-import 'package:dad_jokes_demo/data/client/dio_singleton.dart';
 import 'package:dad_jokes_demo/data/model/joke.dart';
+import 'package:dad_jokes_demo/data/repositories/favorite_jokes_repo.dart';
 import 'package:dad_jokes_demo/widgets/app_bar.dart';
 import 'package:dad_jokes_demo/widgets/spacers.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +19,7 @@ class RandomJokePage extends StatelessWidget {
       ),
       body: BlocProvider<RandomJokeBloc>(
         create: (context) => RandomJokeBloc(
-          client: AppClient(DioSingleton.instance()),
+          client: context.read<AppClient>(),
         )..add(
             RandomJokeEvent.newJoke(),
           ),
@@ -116,6 +117,8 @@ class _LoadSuccess extends StatelessWidget {
                             },
                             child: Text('Let\'s try next one!'),
                           ),
+                          pad2(),
+                          _FavoriteButton(joke: joke),
                         ],
                       )
                     ],
@@ -125,6 +128,32 @@ class _LoadSuccess extends StatelessWidget {
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class _FavoriteButton extends StatelessWidget {
+  final Joke joke;
+  const _FavoriteButton({Key? key, required this.joke}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocBuilder<FavoritesBloc, FavoritesState>(
+      builder: (context, state) => state.map(
+        initial: (state) => ElevatedButton(onPressed: null, child: CircularProgressIndicator()),
+        loadInProgress: (state) => ElevatedButton(onPressed: null, child: CircularProgressIndicator()),
+        loadFailure: (state) => Container(),
+        loadSuccess: (state) {
+          final isFavorite = state.favoriteJokes.contains(joke);
+          final bloc = BlocProvider.of<FavoritesBloc>(context);
+
+          return IconButton(
+            onPressed:
+                isFavorite ? () => bloc.add(FavoritesEvent.remove(joke)) : () => bloc.add(FavoritesEvent.add(joke)),
+            icon: Icon(isFavorite ? Icons.star : Icons.star_border),
+          );
+        },
       ),
     );
   }

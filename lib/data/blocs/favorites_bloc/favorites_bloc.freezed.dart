@@ -1,7 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
-part of 'random_joke_bloc.dart';
+part of 'favorites_bloc.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -13,8 +13,8 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-class _$RandomJokeStateTearOff {
-  const _$RandomJokeStateTearOff();
+class _$FavoritesStateTearOff {
+  const _$FavoritesStateTearOff();
 
   _Initial initial() {
     return const _Initial();
@@ -24,9 +24,9 @@ class _$RandomJokeStateTearOff {
     return const _LoadInProgress();
   }
 
-  _LoadSuccess loadSuccess(Joke joke) {
+  _LoadSuccess loadSuccess(List<Joke> favoriteJokes) {
     return _LoadSuccess(
-      joke,
+      favoriteJokes,
     );
   }
 
@@ -36,15 +36,15 @@ class _$RandomJokeStateTearOff {
 }
 
 /// @nodoc
-const $RandomJokeState = _$RandomJokeStateTearOff();
+const $FavoritesState = _$FavoritesStateTearOff();
 
 /// @nodoc
-mixin _$RandomJokeState {
+mixin _$FavoritesState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadInProgress,
-    required TResult Function(Joke joke) loadSuccess,
+    required TResult Function(List<Joke> favoriteJokes) loadSuccess,
     required TResult Function() loadFailure,
   }) =>
       throw _privateConstructorUsedError;
@@ -52,7 +52,7 @@ mixin _$RandomJokeState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
-    TResult Function(Joke joke)? loadSuccess,
+    TResult Function(List<Joke> favoriteJokes)? loadSuccess,
     TResult Function()? loadFailure,
     required TResult orElse(),
   }) =>
@@ -77,20 +77,20 @@ mixin _$RandomJokeState {
 }
 
 /// @nodoc
-abstract class $RandomJokeStateCopyWith<$Res> {
-  factory $RandomJokeStateCopyWith(
-          RandomJokeState value, $Res Function(RandomJokeState) then) =
-      _$RandomJokeStateCopyWithImpl<$Res>;
+abstract class $FavoritesStateCopyWith<$Res> {
+  factory $FavoritesStateCopyWith(
+          FavoritesState value, $Res Function(FavoritesState) then) =
+      _$FavoritesStateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$RandomJokeStateCopyWithImpl<$Res>
-    implements $RandomJokeStateCopyWith<$Res> {
-  _$RandomJokeStateCopyWithImpl(this._value, this._then);
+class _$FavoritesStateCopyWithImpl<$Res>
+    implements $FavoritesStateCopyWith<$Res> {
+  _$FavoritesStateCopyWithImpl(this._value, this._then);
 
-  final RandomJokeState _value;
+  final FavoritesState _value;
   // ignore: unused_field
-  final $Res Function(RandomJokeState) _then;
+  final $Res Function(FavoritesState) _then;
 }
 
 /// @nodoc
@@ -100,7 +100,7 @@ abstract class _$InitialCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$InitialCopyWithImpl<$Res> extends _$RandomJokeStateCopyWithImpl<$Res>
+class __$InitialCopyWithImpl<$Res> extends _$FavoritesStateCopyWithImpl<$Res>
     implements _$InitialCopyWith<$Res> {
   __$InitialCopyWithImpl(_Initial _value, $Res Function(_Initial) _then)
       : super(_value, (v) => _then(v as _Initial));
@@ -116,13 +116,13 @@ class _$_Initial with DiagnosticableTreeMixin implements _Initial {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'RandomJokeState.initial()';
+    return 'FavoritesState.initial()';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'RandomJokeState.initial'));
+    properties..add(DiagnosticsProperty('type', 'FavoritesState.initial'));
   }
 
   @override
@@ -138,7 +138,7 @@ class _$_Initial with DiagnosticableTreeMixin implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadInProgress,
-    required TResult Function(Joke joke) loadSuccess,
+    required TResult Function(List<Joke> favoriteJokes) loadSuccess,
     required TResult Function() loadFailure,
   }) {
     return initial();
@@ -149,7 +149,7 @@ class _$_Initial with DiagnosticableTreeMixin implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
-    TResult Function(Joke joke)? loadSuccess,
+    TResult Function(List<Joke> favoriteJokes)? loadSuccess,
     TResult Function()? loadFailure,
     required TResult orElse(),
   }) {
@@ -186,7 +186,7 @@ class _$_Initial with DiagnosticableTreeMixin implements _Initial {
   }
 }
 
-abstract class _Initial implements RandomJokeState {
+abstract class _Initial implements FavoritesState {
   const factory _Initial() = _$_Initial;
 }
 
@@ -199,7 +199,7 @@ abstract class _$LoadInProgressCopyWith<$Res> {
 
 /// @nodoc
 class __$LoadInProgressCopyWithImpl<$Res>
-    extends _$RandomJokeStateCopyWithImpl<$Res>
+    extends _$FavoritesStateCopyWithImpl<$Res>
     implements _$LoadInProgressCopyWith<$Res> {
   __$LoadInProgressCopyWithImpl(
       _LoadInProgress _value, $Res Function(_LoadInProgress) _then)
@@ -218,14 +218,14 @@ class _$_LoadInProgress
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'RandomJokeState.loadInProgress()';
+    return 'FavoritesState.loadInProgress()';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'RandomJokeState.loadInProgress'));
+      ..add(DiagnosticsProperty('type', 'FavoritesState.loadInProgress'));
   }
 
   @override
@@ -241,7 +241,7 @@ class _$_LoadInProgress
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadInProgress,
-    required TResult Function(Joke joke) loadSuccess,
+    required TResult Function(List<Joke> favoriteJokes) loadSuccess,
     required TResult Function() loadFailure,
   }) {
     return loadInProgress();
@@ -252,7 +252,7 @@ class _$_LoadInProgress
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
-    TResult Function(Joke joke)? loadSuccess,
+    TResult Function(List<Joke> favoriteJokes)? loadSuccess,
     TResult Function()? loadFailure,
     required TResult orElse(),
   }) {
@@ -289,7 +289,7 @@ class _$_LoadInProgress
   }
 }
 
-abstract class _LoadInProgress implements RandomJokeState {
+abstract class _LoadInProgress implements FavoritesState {
   const factory _LoadInProgress() = _$_LoadInProgress;
 }
 
@@ -298,14 +298,12 @@ abstract class _$LoadSuccessCopyWith<$Res> {
   factory _$LoadSuccessCopyWith(
           _LoadSuccess value, $Res Function(_LoadSuccess) then) =
       __$LoadSuccessCopyWithImpl<$Res>;
-  $Res call({Joke joke});
-
-  $JokeCopyWith<$Res> get joke;
+  $Res call({List<Joke> favoriteJokes});
 }
 
 /// @nodoc
 class __$LoadSuccessCopyWithImpl<$Res>
-    extends _$RandomJokeStateCopyWithImpl<$Res>
+    extends _$FavoritesStateCopyWithImpl<$Res>
     implements _$LoadSuccessCopyWith<$Res> {
   __$LoadSuccessCopyWithImpl(
       _LoadSuccess _value, $Res Function(_LoadSuccess) _then)
@@ -316,56 +314,50 @@ class __$LoadSuccessCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? joke = freezed,
+    Object? favoriteJokes = freezed,
   }) {
     return _then(_LoadSuccess(
-      joke == freezed
-          ? _value.joke
-          : joke // ignore: cast_nullable_to_non_nullable
-              as Joke,
+      favoriteJokes == freezed
+          ? _value.favoriteJokes
+          : favoriteJokes // ignore: cast_nullable_to_non_nullable
+              as List<Joke>,
     ));
-  }
-
-  @override
-  $JokeCopyWith<$Res> get joke {
-    return $JokeCopyWith<$Res>(_value.joke, (value) {
-      return _then(_value.copyWith(joke: value));
-    });
   }
 }
 
 /// @nodoc
 
 class _$_LoadSuccess with DiagnosticableTreeMixin implements _LoadSuccess {
-  const _$_LoadSuccess(this.joke);
+  const _$_LoadSuccess(this.favoriteJokes);
 
   @override
-  final Joke joke;
+  final List<Joke> favoriteJokes;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'RandomJokeState.loadSuccess(joke: $joke)';
+    return 'FavoritesState.loadSuccess(favoriteJokes: $favoriteJokes)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'RandomJokeState.loadSuccess'))
-      ..add(DiagnosticsProperty('joke', joke));
+      ..add(DiagnosticsProperty('type', 'FavoritesState.loadSuccess'))
+      ..add(DiagnosticsProperty('favoriteJokes', favoriteJokes));
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _LoadSuccess &&
-            (identical(other.joke, joke) ||
-                const DeepCollectionEquality().equals(other.joke, joke)));
+            (identical(other.favoriteJokes, favoriteJokes) ||
+                const DeepCollectionEquality()
+                    .equals(other.favoriteJokes, favoriteJokes)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(joke);
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(favoriteJokes);
 
   @JsonKey(ignore: true)
   @override
@@ -377,10 +369,10 @@ class _$_LoadSuccess with DiagnosticableTreeMixin implements _LoadSuccess {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadInProgress,
-    required TResult Function(Joke joke) loadSuccess,
+    required TResult Function(List<Joke> favoriteJokes) loadSuccess,
     required TResult Function() loadFailure,
   }) {
-    return loadSuccess(joke);
+    return loadSuccess(favoriteJokes);
   }
 
   @override
@@ -388,12 +380,12 @@ class _$_LoadSuccess with DiagnosticableTreeMixin implements _LoadSuccess {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
-    TResult Function(Joke joke)? loadSuccess,
+    TResult Function(List<Joke> favoriteJokes)? loadSuccess,
     TResult Function()? loadFailure,
     required TResult orElse(),
   }) {
     if (loadSuccess != null) {
-      return loadSuccess(joke);
+      return loadSuccess(favoriteJokes);
     }
     return orElse();
   }
@@ -425,10 +417,10 @@ class _$_LoadSuccess with DiagnosticableTreeMixin implements _LoadSuccess {
   }
 }
 
-abstract class _LoadSuccess implements RandomJokeState {
-  const factory _LoadSuccess(Joke joke) = _$_LoadSuccess;
+abstract class _LoadSuccess implements FavoritesState {
+  const factory _LoadSuccess(List<Joke> favoriteJokes) = _$_LoadSuccess;
 
-  Joke get joke => throw _privateConstructorUsedError;
+  List<Joke> get favoriteJokes => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$LoadSuccessCopyWith<_LoadSuccess> get copyWith =>
       throw _privateConstructorUsedError;
@@ -443,7 +435,7 @@ abstract class _$LoadFailureCopyWith<$Res> {
 
 /// @nodoc
 class __$LoadFailureCopyWithImpl<$Res>
-    extends _$RandomJokeStateCopyWithImpl<$Res>
+    extends _$FavoritesStateCopyWithImpl<$Res>
     implements _$LoadFailureCopyWith<$Res> {
   __$LoadFailureCopyWithImpl(
       _LoadFailure _value, $Res Function(_LoadFailure) _then)
@@ -460,13 +452,13 @@ class _$_LoadFailure with DiagnosticableTreeMixin implements _LoadFailure {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'RandomJokeState.loadFailure()';
+    return 'FavoritesState.loadFailure()';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'RandomJokeState.loadFailure'));
+    properties..add(DiagnosticsProperty('type', 'FavoritesState.loadFailure'));
   }
 
   @override
@@ -482,7 +474,7 @@ class _$_LoadFailure with DiagnosticableTreeMixin implements _LoadFailure {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadInProgress,
-    required TResult Function(Joke joke) loadSuccess,
+    required TResult Function(List<Joke> favoriteJokes) loadSuccess,
     required TResult Function() loadFailure,
   }) {
     return loadFailure();
@@ -493,7 +485,7 @@ class _$_LoadFailure with DiagnosticableTreeMixin implements _LoadFailure {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
-    TResult Function(Joke joke)? loadSuccess,
+    TResult Function(List<Joke> favoriteJokes)? loadSuccess,
     TResult Function()? loadFailure,
     required TResult orElse(),
   }) {
@@ -530,103 +522,121 @@ class _$_LoadFailure with DiagnosticableTreeMixin implements _LoadFailure {
   }
 }
 
-abstract class _LoadFailure implements RandomJokeState {
+abstract class _LoadFailure implements FavoritesState {
   const factory _LoadFailure() = _$_LoadFailure;
 }
 
 /// @nodoc
-class _$RandomJokeEventTearOff {
-  const _$RandomJokeEventTearOff();
+class _$FavoritesEventTearOff {
+  const _$FavoritesEventTearOff();
 
-  _NewJokeEvent newJoke() {
-    return const _NewJokeEvent();
+  _LoadEvent load() {
+    return const _LoadEvent();
+  }
+
+  _AddEvent add(Joke joke) {
+    return _AddEvent(
+      joke,
+    );
+  }
+
+  _RemoveEvent remove(Joke joke) {
+    return _RemoveEvent(
+      joke,
+    );
   }
 }
 
 /// @nodoc
-const $RandomJokeEvent = _$RandomJokeEventTearOff();
+const $FavoritesEvent = _$FavoritesEventTearOff();
 
 /// @nodoc
-mixin _$RandomJokeEvent {
+mixin _$FavoritesEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() newJoke,
+    required TResult Function() load,
+    required TResult Function(Joke joke) add,
+    required TResult Function(Joke joke) remove,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? newJoke,
+    TResult Function()? load,
+    TResult Function(Joke joke)? add,
+    TResult Function(Joke joke)? remove,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_NewJokeEvent value) newJoke,
+    required TResult Function(_LoadEvent value) load,
+    required TResult Function(_AddEvent value) add,
+    required TResult Function(_RemoveEvent value) remove,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_NewJokeEvent value)? newJoke,
+    TResult Function(_LoadEvent value)? load,
+    TResult Function(_AddEvent value)? add,
+    TResult Function(_RemoveEvent value)? remove,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $RandomJokeEventCopyWith<$Res> {
-  factory $RandomJokeEventCopyWith(
-          RandomJokeEvent value, $Res Function(RandomJokeEvent) then) =
-      _$RandomJokeEventCopyWithImpl<$Res>;
+abstract class $FavoritesEventCopyWith<$Res> {
+  factory $FavoritesEventCopyWith(
+          FavoritesEvent value, $Res Function(FavoritesEvent) then) =
+      _$FavoritesEventCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$RandomJokeEventCopyWithImpl<$Res>
-    implements $RandomJokeEventCopyWith<$Res> {
-  _$RandomJokeEventCopyWithImpl(this._value, this._then);
+class _$FavoritesEventCopyWithImpl<$Res>
+    implements $FavoritesEventCopyWith<$Res> {
+  _$FavoritesEventCopyWithImpl(this._value, this._then);
 
-  final RandomJokeEvent _value;
+  final FavoritesEvent _value;
   // ignore: unused_field
-  final $Res Function(RandomJokeEvent) _then;
+  final $Res Function(FavoritesEvent) _then;
 }
 
 /// @nodoc
-abstract class _$NewJokeEventCopyWith<$Res> {
-  factory _$NewJokeEventCopyWith(
-          _NewJokeEvent value, $Res Function(_NewJokeEvent) then) =
-      __$NewJokeEventCopyWithImpl<$Res>;
+abstract class _$LoadEventCopyWith<$Res> {
+  factory _$LoadEventCopyWith(
+          _LoadEvent value, $Res Function(_LoadEvent) then) =
+      __$LoadEventCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$NewJokeEventCopyWithImpl<$Res>
-    extends _$RandomJokeEventCopyWithImpl<$Res>
-    implements _$NewJokeEventCopyWith<$Res> {
-  __$NewJokeEventCopyWithImpl(
-      _NewJokeEvent _value, $Res Function(_NewJokeEvent) _then)
-      : super(_value, (v) => _then(v as _NewJokeEvent));
+class __$LoadEventCopyWithImpl<$Res> extends _$FavoritesEventCopyWithImpl<$Res>
+    implements _$LoadEventCopyWith<$Res> {
+  __$LoadEventCopyWithImpl(_LoadEvent _value, $Res Function(_LoadEvent) _then)
+      : super(_value, (v) => _then(v as _LoadEvent));
 
   @override
-  _NewJokeEvent get _value => super._value as _NewJokeEvent;
+  _LoadEvent get _value => super._value as _LoadEvent;
 }
 
 /// @nodoc
 
-class _$_NewJokeEvent with DiagnosticableTreeMixin implements _NewJokeEvent {
-  const _$_NewJokeEvent();
+class _$_LoadEvent with DiagnosticableTreeMixin implements _LoadEvent {
+  const _$_LoadEvent();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'RandomJokeEvent.newJoke()';
+    return 'FavoritesEvent.load()';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'RandomJokeEvent.newJoke'));
+    properties..add(DiagnosticsProperty('type', 'FavoritesEvent.load'));
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _NewJokeEvent);
+    return identical(this, other) || (other is _LoadEvent);
   }
 
   @override
@@ -635,19 +645,23 @@ class _$_NewJokeEvent with DiagnosticableTreeMixin implements _NewJokeEvent {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() newJoke,
+    required TResult Function() load,
+    required TResult Function(Joke joke) add,
+    required TResult Function(Joke joke) remove,
   }) {
-    return newJoke();
+    return load();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? newJoke,
+    TResult Function()? load,
+    TResult Function(Joke joke)? add,
+    TResult Function(Joke joke)? remove,
     required TResult orElse(),
   }) {
-    if (newJoke != null) {
-      return newJoke();
+    if (load != null) {
+      return load();
     }
     return orElse();
   }
@@ -655,24 +669,299 @@ class _$_NewJokeEvent with DiagnosticableTreeMixin implements _NewJokeEvent {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_NewJokeEvent value) newJoke,
+    required TResult Function(_LoadEvent value) load,
+    required TResult Function(_AddEvent value) add,
+    required TResult Function(_RemoveEvent value) remove,
   }) {
-    return newJoke(this);
+    return load(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_NewJokeEvent value)? newJoke,
+    TResult Function(_LoadEvent value)? load,
+    TResult Function(_AddEvent value)? add,
+    TResult Function(_RemoveEvent value)? remove,
     required TResult orElse(),
   }) {
-    if (newJoke != null) {
-      return newJoke(this);
+    if (load != null) {
+      return load(this);
     }
     return orElse();
   }
 }
 
-abstract class _NewJokeEvent implements RandomJokeEvent {
-  const factory _NewJokeEvent() = _$_NewJokeEvent;
+abstract class _LoadEvent implements FavoritesEvent {
+  const factory _LoadEvent() = _$_LoadEvent;
+}
+
+/// @nodoc
+abstract class _$AddEventCopyWith<$Res> {
+  factory _$AddEventCopyWith(_AddEvent value, $Res Function(_AddEvent) then) =
+      __$AddEventCopyWithImpl<$Res>;
+  $Res call({Joke joke});
+
+  $JokeCopyWith<$Res> get joke;
+}
+
+/// @nodoc
+class __$AddEventCopyWithImpl<$Res> extends _$FavoritesEventCopyWithImpl<$Res>
+    implements _$AddEventCopyWith<$Res> {
+  __$AddEventCopyWithImpl(_AddEvent _value, $Res Function(_AddEvent) _then)
+      : super(_value, (v) => _then(v as _AddEvent));
+
+  @override
+  _AddEvent get _value => super._value as _AddEvent;
+
+  @override
+  $Res call({
+    Object? joke = freezed,
+  }) {
+    return _then(_AddEvent(
+      joke == freezed
+          ? _value.joke
+          : joke // ignore: cast_nullable_to_non_nullable
+              as Joke,
+    ));
+  }
+
+  @override
+  $JokeCopyWith<$Res> get joke {
+    return $JokeCopyWith<$Res>(_value.joke, (value) {
+      return _then(_value.copyWith(joke: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$_AddEvent with DiagnosticableTreeMixin implements _AddEvent {
+  const _$_AddEvent(this.joke);
+
+  @override
+  final Joke joke;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'FavoritesEvent.add(joke: $joke)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'FavoritesEvent.add'))
+      ..add(DiagnosticsProperty('joke', joke));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _AddEvent &&
+            (identical(other.joke, joke) ||
+                const DeepCollectionEquality().equals(other.joke, joke)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(joke);
+
+  @JsonKey(ignore: true)
+  @override
+  _$AddEventCopyWith<_AddEvent> get copyWith =>
+      __$AddEventCopyWithImpl<_AddEvent>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() load,
+    required TResult Function(Joke joke) add,
+    required TResult Function(Joke joke) remove,
+  }) {
+    return add(joke);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? load,
+    TResult Function(Joke joke)? add,
+    TResult Function(Joke joke)? remove,
+    required TResult orElse(),
+  }) {
+    if (add != null) {
+      return add(joke);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_LoadEvent value) load,
+    required TResult Function(_AddEvent value) add,
+    required TResult Function(_RemoveEvent value) remove,
+  }) {
+    return add(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_LoadEvent value)? load,
+    TResult Function(_AddEvent value)? add,
+    TResult Function(_RemoveEvent value)? remove,
+    required TResult orElse(),
+  }) {
+    if (add != null) {
+      return add(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AddEvent implements FavoritesEvent {
+  const factory _AddEvent(Joke joke) = _$_AddEvent;
+
+  Joke get joke => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$AddEventCopyWith<_AddEvent> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$RemoveEventCopyWith<$Res> {
+  factory _$RemoveEventCopyWith(
+          _RemoveEvent value, $Res Function(_RemoveEvent) then) =
+      __$RemoveEventCopyWithImpl<$Res>;
+  $Res call({Joke joke});
+
+  $JokeCopyWith<$Res> get joke;
+}
+
+/// @nodoc
+class __$RemoveEventCopyWithImpl<$Res>
+    extends _$FavoritesEventCopyWithImpl<$Res>
+    implements _$RemoveEventCopyWith<$Res> {
+  __$RemoveEventCopyWithImpl(
+      _RemoveEvent _value, $Res Function(_RemoveEvent) _then)
+      : super(_value, (v) => _then(v as _RemoveEvent));
+
+  @override
+  _RemoveEvent get _value => super._value as _RemoveEvent;
+
+  @override
+  $Res call({
+    Object? joke = freezed,
+  }) {
+    return _then(_RemoveEvent(
+      joke == freezed
+          ? _value.joke
+          : joke // ignore: cast_nullable_to_non_nullable
+              as Joke,
+    ));
+  }
+
+  @override
+  $JokeCopyWith<$Res> get joke {
+    return $JokeCopyWith<$Res>(_value.joke, (value) {
+      return _then(_value.copyWith(joke: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$_RemoveEvent with DiagnosticableTreeMixin implements _RemoveEvent {
+  const _$_RemoveEvent(this.joke);
+
+  @override
+  final Joke joke;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'FavoritesEvent.remove(joke: $joke)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'FavoritesEvent.remove'))
+      ..add(DiagnosticsProperty('joke', joke));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _RemoveEvent &&
+            (identical(other.joke, joke) ||
+                const DeepCollectionEquality().equals(other.joke, joke)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(joke);
+
+  @JsonKey(ignore: true)
+  @override
+  _$RemoveEventCopyWith<_RemoveEvent> get copyWith =>
+      __$RemoveEventCopyWithImpl<_RemoveEvent>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() load,
+    required TResult Function(Joke joke) add,
+    required TResult Function(Joke joke) remove,
+  }) {
+    return remove(joke);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? load,
+    TResult Function(Joke joke)? add,
+    TResult Function(Joke joke)? remove,
+    required TResult orElse(),
+  }) {
+    if (remove != null) {
+      return remove(joke);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_LoadEvent value) load,
+    required TResult Function(_AddEvent value) add,
+    required TResult Function(_RemoveEvent value) remove,
+  }) {
+    return remove(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_LoadEvent value)? load,
+    TResult Function(_AddEvent value)? add,
+    TResult Function(_RemoveEvent value)? remove,
+    required TResult orElse(),
+  }) {
+    if (remove != null) {
+      return remove(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _RemoveEvent implements FavoritesEvent {
+  const factory _RemoveEvent(Joke joke) = _$_RemoveEvent;
+
+  Joke get joke => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$RemoveEventCopyWith<_RemoveEvent> get copyWith =>
+      throw _privateConstructorUsedError;
 }
