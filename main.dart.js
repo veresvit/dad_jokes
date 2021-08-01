@@ -36267,7 +36267,7 @@ F.Ld.prototype={
 J:function(a,b){var s=null,r=$.anN()
 return new U.qh(H.a([K.afI("/",new O.DT(s)),K.afI("/random",new N.Fg(s)),K.afI("/favorites",new V.CM(s)),new M.I3(":_(.*)","/",s)],t.C),"/","Dad jokes demo",r,!1,s,s)}}
 V.CM.prototype={
-J:function(a,b){return M.afs(E.af_("Joke page"),O.R2(new V.US(),t.nX,t.w0))}}
+J:function(a,b){return M.afs(E.af_("Favorite jokes"),O.R2(new V.US(),t.nX,t.w0))}}
 V.US.prototype={
 $2:function(a,b){return b.fI(0,new V.UO(),new V.UP(),new V.UQ(),new V.UR())},
 $C:"$2",
