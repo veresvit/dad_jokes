@@ -12,7 +12,7 @@ class FavoritesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MainAppBar(
-        title: 'Joke page',
+        title: 'Favorite jokes',
       ),
       body: BlocBuilder<FavoritesBloc, FavoritesState>(
         builder: (context, state) => state.map(
