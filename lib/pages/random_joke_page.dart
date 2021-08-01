@@ -2,7 +2,6 @@ import 'package:dad_jokes_demo/data/blocs/favorites_bloc/favorites_bloc.dart';
 import 'package:dad_jokes_demo/data/blocs/random_joke_bloc/random_joke_bloc.dart';
 import 'package:dad_jokes_demo/data/client/app_client.dart';
 import 'package:dad_jokes_demo/data/model/joke.dart';
-import 'package:dad_jokes_demo/data/repositories/favorite_jokes_repo.dart';
 import 'package:dad_jokes_demo/widgets/app_bar.dart';
 import 'package:dad_jokes_demo/widgets/spacers.dart';
 import 'package:flutter/material.dart';

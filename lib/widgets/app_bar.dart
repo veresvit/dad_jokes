@@ -29,7 +29,10 @@ class MainAppBar extends StatelessWidget with PreferredSizeWidget {
       elevation: elevation,
       backgroundColor: AppColors.cardColor,
       centerTitle: false,
-      title: Text(title),
+      title: InkWell(
+        child: Text(title),
+        onTap: () => AppRouter.toHome(context),
+      ),
       actions: [...actions, _FavoritesIcon()],
       brightness: Brightness.light,
       iconTheme: IconThemeData(
