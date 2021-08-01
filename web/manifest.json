@@ -1,6 +1,6 @@
 {
-    "name": "dad_jokes",
-    "short_name": "dad_jokes",
+    "name": "dad_jokes_demo",
+    "short_name": "dad_jokes_demo",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
