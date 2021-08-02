@@ -1,7 +1,6 @@
 import 'package:dad_jokes_demo/data/blocs/favorites_bloc/favorites_bloc.dart';
 import 'package:dad_jokes_demo/data/model/joke.dart';
 import 'package:dad_jokes_demo/widgets/app_bar.dart';
-import 'package:dad_jokes_demo/widgets/spacers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

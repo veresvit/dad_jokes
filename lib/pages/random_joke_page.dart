@@ -103,22 +103,29 @@ class _LoadSuccess extends StatelessWidget {
                         style: Theme.of(context).textTheme.headline5,
                       ),
                       pad2(),
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text('I think I\'ve got this one!'),
-                          pad2(),
-                          ElevatedButton(
-                            onPressed: () {
-                              BlocProvider.of<RandomJokeBloc>(context).add(
-                                RandomJokeEvent.newJoke(),
-                              );
-                            },
-                            child: Text('Let\'s try next one!'),
-                          ),
-                          pad2(),
-                          _FavoriteButton(joke: joke),
-                        ],
+                      LayoutBuilder(
+                        builder: (context, constraints) {
+                          var isHorizontal = constraints.maxWidth > 350;
+                          return Flex(
+                            mainAxisSize: MainAxisSize.min,
+                            crossAxisAlignment: isHorizontal ? CrossAxisAlignment.center : CrossAxisAlignment.end,
+                            direction: isHorizontal ? Axis.horizontal : Axis.vertical,
+                            children: [
+                              Text('I think I\'ve got this one!'),
+                              pad2(),
+                              ElevatedButton(
+                                onPressed: () {
+                                  BlocProvider.of<RandomJokeBloc>(context).add(
+                                    RandomJokeEvent.newJoke(),
+                                  );
+                                },
+                                child: Text('Let\'s try next one!'),
+                              ),
+                              pad2(),
+                              _FavoriteButton(joke: joke),
+                            ],
+                          );
+                        },
                       )
                     ],
                   ),
