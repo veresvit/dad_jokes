@@ -5,7 +5,6 @@ import 'package:google_fonts/google_fonts.dart';
 class AppTheme {
   static ThemeData theme = ThemeData(
     primaryColor: AppColors.primaryColor,
-    accentColor: AppColors.accentColor,
     scaffoldBackgroundColor: AppColors.background,
     cardColor: AppColors.cardColor,
     errorColor: AppColors.errorColor,
@@ -52,9 +51,10 @@ class AppTheme {
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         padding: EdgeInsets.all(24),
-        primary: AppColors.accentColor,
+        backgroundColor: AppColors.accentColor,
         textStyle: TextStyle(fontWeight: FontWeight.bold),
       ),
     ),
+    colorScheme: ColorScheme.fromSwatch().copyWith(secondary: AppColors.accentColor),
   );
 }

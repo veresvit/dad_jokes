@@ -13,24 +13,19 @@ class RandomJokeBloc extends Bloc<RandomJokeEvent, RandomJokeState> {
 
   RandomJokeBloc({
     required this.client,
-  }) : super(_Initial());
-
-  @override
-  Stream<RandomJokeState> mapEventToState(RandomJokeEvent event) async* {
-    yield* event.map(
-      newJoke: _nextRandomJoke,
-    );
+  }) : super(_Initial()) {
+    on<_NewJokeEvent>((event, emit) => _nextRandomJoke(event, emit));
   }
 
-  Stream<RandomJokeState> _nextRandomJoke(_NewJokeEvent event) async* {
-    yield RandomJokeState.loadInProgress();
+  Future<void> _nextRandomJoke(_NewJokeEvent event, Emitter<RandomJokeState> emit) async {
+    emit(RandomJokeState.loadInProgress());
 
     try {
       final joke = await client.randomJoke();
-      yield RandomJokeState.loadSuccess(joke);
+      emit(RandomJokeState.loadSuccess(joke));
     } catch (e, stck) {
       debugPrint('$e: $stck');
-      yield RandomJokeState.loadFailure();
+      emit(RandomJokeState.loadFailure());
     }
   }
 }

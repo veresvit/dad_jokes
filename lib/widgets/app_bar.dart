@@ -3,6 +3,7 @@ import 'package:dad_jokes_demo/data/blocs/favorites_bloc/favorites_bloc.dart';
 import 'package:dad_jokes_demo/utils/app_router.dart';
 import 'package:dad_jokes_demo/values/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class MainAppBar extends StatelessWidget with PreferredSizeWidget {
@@ -34,16 +35,25 @@ class MainAppBar extends StatelessWidget with PreferredSizeWidget {
         onTap: () => AppRouter.toHome(context),
       ),
       actions: [...actions, _FavoritesIcon()],
-      brightness: Brightness.light,
       iconTheme: IconThemeData(
         color: AppColors.text,
       ),
       actionsIconTheme: IconThemeData(
         color: AppColors.text,
       ),
-      textTheme: Theme.of(context).textTheme.apply(
+      systemOverlayStyle: SystemUiOverlayStyle.dark,
+      toolbarTextStyle: Theme.of(context)
+          .textTheme
+          .apply(
             bodyColor: AppColors.text,
-          ),
+          )
+          .bodyText2,
+      titleTextStyle: Theme.of(context)
+          .textTheme
+          .apply(
+            bodyColor: AppColors.text,
+          )
+          .headline6,
     );
   }
 }

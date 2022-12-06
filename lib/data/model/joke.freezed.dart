@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'joke.dart';
 
@@ -10,30 +12,11 @@ part of 'joke.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Joke _$JokeFromJson(Map<String, dynamic> json) {
   return _Joke.fromJson(json);
 }
-
-/// @nodoc
-class _$JokeTearOff {
-  const _$JokeTearOff();
-
-  _Joke call({required String id, required String joke}) {
-    return _Joke(
-      id: id,
-      joke: joke,
-    );
-  }
-
-  Joke fromJson(Map<String, Object> json) {
-    return Joke.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Joke = _$JokeTearOff();
 
 /// @nodoc
 mixin _$Joke {
@@ -48,64 +31,67 @@ mixin _$Joke {
 /// @nodoc
 abstract class $JokeCopyWith<$Res> {
   factory $JokeCopyWith(Joke value, $Res Function(Joke) then) =
-      _$JokeCopyWithImpl<$Res>;
+      _$JokeCopyWithImpl<$Res, Joke>;
+  @useResult
   $Res call({String id, String joke});
 }
 
 /// @nodoc
-class _$JokeCopyWithImpl<$Res> implements $JokeCopyWith<$Res> {
+class _$JokeCopyWithImpl<$Res, $Val extends Joke>
+    implements $JokeCopyWith<$Res> {
   _$JokeCopyWithImpl(this._value, this._then);
 
-  final Joke _value;
   // ignore: unused_field
-  final $Res Function(Joke) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? joke = freezed,
+    Object? id = null,
+    Object? joke = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      joke: joke == freezed
+      joke: null == joke
           ? _value.joke
           : joke // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$JokeCopyWith<$Res> implements $JokeCopyWith<$Res> {
-  factory _$JokeCopyWith(_Joke value, $Res Function(_Joke) then) =
-      __$JokeCopyWithImpl<$Res>;
+abstract class _$$_JokeCopyWith<$Res> implements $JokeCopyWith<$Res> {
+  factory _$$_JokeCopyWith(_$_Joke value, $Res Function(_$_Joke) then) =
+      __$$_JokeCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String id, String joke});
 }
 
 /// @nodoc
-class __$JokeCopyWithImpl<$Res> extends _$JokeCopyWithImpl<$Res>
-    implements _$JokeCopyWith<$Res> {
-  __$JokeCopyWithImpl(_Joke _value, $Res Function(_Joke) _then)
-      : super(_value, (v) => _then(v as _Joke));
+class __$$_JokeCopyWithImpl<$Res> extends _$JokeCopyWithImpl<$Res, _$_Joke>
+    implements _$$_JokeCopyWith<$Res> {
+  __$$_JokeCopyWithImpl(_$_Joke _value, $Res Function(_$_Joke) _then)
+      : super(_value, _then);
 
-  @override
-  _Joke get _value => super._value as _Joke;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? joke = freezed,
+    Object? id = null,
+    Object? joke = null,
   }) {
-    return _then(_Joke(
-      id: id == freezed
+    return _then(_$_Joke(
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      joke: joke == freezed
+      joke: null == joke
           ? _value.joke
           : joke // ignore: cast_nullable_to_non_nullable
               as String,
@@ -118,8 +104,7 @@ class __$JokeCopyWithImpl<$Res> extends _$JokeCopyWithImpl<$Res>
 class _$_Joke implements _Joke {
   _$_Joke({required this.id, required this.joke});
 
-  factory _$_Joke.fromJson(Map<String, dynamic> json) =>
-      _$_$_JokeFromJson(json);
+  factory _$_Joke.fromJson(Map<String, dynamic> json) => _$$_JokeFromJson(json);
 
   @override
   final String id;
@@ -134,40 +119,41 @@ class _$_Joke implements _Joke {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Joke &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.joke, joke) ||
-                const DeepCollectionEquality().equals(other.joke, joke)));
+        (other.runtimeType == runtimeType &&
+            other is _$_Joke &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.joke, joke) || other.joke == joke));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(joke);
 
   @JsonKey(ignore: true)
   @override
-  _$JokeCopyWith<_Joke> get copyWith =>
-      __$JokeCopyWithImpl<_Joke>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, id, joke);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_JokeCopyWith<_$_Joke> get copyWith =>
+      __$$_JokeCopyWithImpl<_$_Joke>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_JokeToJson(this);
+    return _$$_JokeToJson(
+      this,
+    );
   }
 }
 
 abstract class _Joke implements Joke {
-  factory _Joke({required String id, required String joke}) = _$_Joke;
+  factory _Joke({required final String id, required final String joke}) =
+      _$_Joke;
 
   factory _Joke.fromJson(Map<String, dynamic> json) = _$_Joke.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
-  String get joke => throw _privateConstructorUsedError;
+  String get joke;
   @override
   @JsonKey(ignore: true)
-  _$JokeCopyWith<_Joke> get copyWith => throw _privateConstructorUsedError;
+  _$$_JokeCopyWith<_$_Joke> get copyWith => throw _privateConstructorUsedError;
 }

@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'random_joke_bloc.dart';
 
@@ -10,33 +12,7 @@ part of 'random_joke_bloc.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$RandomJokeStateTearOff {
-  const _$RandomJokeStateTearOff();
-
-  _Initial initial() {
-    return const _Initial();
-  }
-
-  _LoadInProgress loadInProgress() {
-    return const _LoadInProgress();
-  }
-
-  _LoadSuccess loadSuccess(Joke joke) {
-    return _LoadSuccess(
-      joke,
-    );
-  }
-
-  _LoadFailure loadFailure() {
-    return const _LoadFailure();
-  }
-}
-
-/// @nodoc
-const $RandomJokeState = _$RandomJokeStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$RandomJokeState {
@@ -46,6 +22,14 @@ mixin _$RandomJokeState {
     required TResult Function() loadInProgress,
     required TResult Function(Joke joke) loadSuccess,
     required TResult Function() loadFailure,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadInProgress,
+    TResult? Function(Joke joke)? loadSuccess,
+    TResult? Function()? loadFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -66,6 +50,14 @@ mixin _$RandomJokeState {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadInProgress value)? loadInProgress,
+    TResult? Function(_LoadSuccess value)? loadSuccess,
+    TResult? Function(_LoadFailure value)? loadFailure,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_LoadInProgress value)? loadInProgress,
@@ -80,33 +72,33 @@ mixin _$RandomJokeState {
 abstract class $RandomJokeStateCopyWith<$Res> {
   factory $RandomJokeStateCopyWith(
           RandomJokeState value, $Res Function(RandomJokeState) then) =
-      _$RandomJokeStateCopyWithImpl<$Res>;
+      _$RandomJokeStateCopyWithImpl<$Res, RandomJokeState>;
 }
 
 /// @nodoc
-class _$RandomJokeStateCopyWithImpl<$Res>
+class _$RandomJokeStateCopyWithImpl<$Res, $Val extends RandomJokeState>
     implements $RandomJokeStateCopyWith<$Res> {
   _$RandomJokeStateCopyWithImpl(this._value, this._then);
 
-  final RandomJokeState _value;
   // ignore: unused_field
-  final $Res Function(RandomJokeState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$InitialCopyWith<$Res> {
-  factory _$InitialCopyWith(_Initial value, $Res Function(_Initial) then) =
-      __$InitialCopyWithImpl<$Res>;
+abstract class _$$_InitialCopyWith<$Res> {
+  factory _$$_InitialCopyWith(
+          _$_Initial value, $Res Function(_$_Initial) then) =
+      __$$_InitialCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$InitialCopyWithImpl<$Res> extends _$RandomJokeStateCopyWithImpl<$Res>
-    implements _$InitialCopyWith<$Res> {
-  __$InitialCopyWithImpl(_Initial _value, $Res Function(_Initial) _then)
-      : super(_value, (v) => _then(v as _Initial));
-
-  @override
-  _Initial get _value => super._value as _Initial;
+class __$$_InitialCopyWithImpl<$Res>
+    extends _$RandomJokeStateCopyWithImpl<$Res, _$_Initial>
+    implements _$$_InitialCopyWith<$Res> {
+  __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -122,12 +114,13 @@ class _$_Initial with DiagnosticableTreeMixin implements _Initial {
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'RandomJokeState.initial'));
+    properties.add(DiagnosticsProperty('type', 'RandomJokeState.initial'));
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _Initial);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_Initial);
   }
 
   @override
@@ -142,6 +135,17 @@ class _$_Initial with DiagnosticableTreeMixin implements _Initial {
     required TResult Function() loadFailure,
   }) {
     return initial();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadInProgress,
+    TResult? Function(Joke joke)? loadSuccess,
+    TResult? Function()? loadFailure,
+  }) {
+    return initial?.call();
   }
 
   @override
@@ -172,6 +176,17 @@ class _$_Initial with DiagnosticableTreeMixin implements _Initial {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadInProgress value)? loadInProgress,
+    TResult? Function(_LoadSuccess value)? loadSuccess,
+    TResult? Function(_LoadFailure value)? loadFailure,
+  }) {
+    return initial?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_LoadInProgress value)? loadInProgress,
@@ -191,22 +206,19 @@ abstract class _Initial implements RandomJokeState {
 }
 
 /// @nodoc
-abstract class _$LoadInProgressCopyWith<$Res> {
-  factory _$LoadInProgressCopyWith(
-          _LoadInProgress value, $Res Function(_LoadInProgress) then) =
-      __$LoadInProgressCopyWithImpl<$Res>;
+abstract class _$$_LoadInProgressCopyWith<$Res> {
+  factory _$$_LoadInProgressCopyWith(
+          _$_LoadInProgress value, $Res Function(_$_LoadInProgress) then) =
+      __$$_LoadInProgressCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$LoadInProgressCopyWithImpl<$Res>
-    extends _$RandomJokeStateCopyWithImpl<$Res>
-    implements _$LoadInProgressCopyWith<$Res> {
-  __$LoadInProgressCopyWithImpl(
-      _LoadInProgress _value, $Res Function(_LoadInProgress) _then)
-      : super(_value, (v) => _then(v as _LoadInProgress));
-
-  @override
-  _LoadInProgress get _value => super._value as _LoadInProgress;
+class __$$_LoadInProgressCopyWithImpl<$Res>
+    extends _$RandomJokeStateCopyWithImpl<$Res, _$_LoadInProgress>
+    implements _$$_LoadInProgressCopyWith<$Res> {
+  __$$_LoadInProgressCopyWithImpl(
+      _$_LoadInProgress _value, $Res Function(_$_LoadInProgress) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -225,12 +237,13 @@ class _$_LoadInProgress
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'RandomJokeState.loadInProgress'));
+        .add(DiagnosticsProperty('type', 'RandomJokeState.loadInProgress'));
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _LoadInProgress);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_LoadInProgress);
   }
 
   @override
@@ -245,6 +258,17 @@ class _$_LoadInProgress
     required TResult Function() loadFailure,
   }) {
     return loadInProgress();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadInProgress,
+    TResult? Function(Joke joke)? loadSuccess,
+    TResult? Function()? loadFailure,
+  }) {
+    return loadInProgress?.call();
   }
 
   @override
@@ -275,6 +299,17 @@ class _$_LoadInProgress
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadInProgress value)? loadInProgress,
+    TResult? Function(_LoadSuccess value)? loadSuccess,
+    TResult? Function(_LoadFailure value)? loadFailure,
+  }) {
+    return loadInProgress?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_LoadInProgress value)? loadInProgress,
@@ -294,32 +329,31 @@ abstract class _LoadInProgress implements RandomJokeState {
 }
 
 /// @nodoc
-abstract class _$LoadSuccessCopyWith<$Res> {
-  factory _$LoadSuccessCopyWith(
-          _LoadSuccess value, $Res Function(_LoadSuccess) then) =
-      __$LoadSuccessCopyWithImpl<$Res>;
+abstract class _$$_LoadSuccessCopyWith<$Res> {
+  factory _$$_LoadSuccessCopyWith(
+          _$_LoadSuccess value, $Res Function(_$_LoadSuccess) then) =
+      __$$_LoadSuccessCopyWithImpl<$Res>;
+  @useResult
   $Res call({Joke joke});
 
   $JokeCopyWith<$Res> get joke;
 }
 
 /// @nodoc
-class __$LoadSuccessCopyWithImpl<$Res>
-    extends _$RandomJokeStateCopyWithImpl<$Res>
-    implements _$LoadSuccessCopyWith<$Res> {
-  __$LoadSuccessCopyWithImpl(
-      _LoadSuccess _value, $Res Function(_LoadSuccess) _then)
-      : super(_value, (v) => _then(v as _LoadSuccess));
+class __$$_LoadSuccessCopyWithImpl<$Res>
+    extends _$RandomJokeStateCopyWithImpl<$Res, _$_LoadSuccess>
+    implements _$$_LoadSuccessCopyWith<$Res> {
+  __$$_LoadSuccessCopyWithImpl(
+      _$_LoadSuccess _value, $Res Function(_$_LoadSuccess) _then)
+      : super(_value, _then);
 
-  @override
-  _LoadSuccess get _value => super._value as _LoadSuccess;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? joke = freezed,
+    Object? joke = null,
   }) {
-    return _then(_LoadSuccess(
-      joke == freezed
+    return _then(_$_LoadSuccess(
+      null == joke
           ? _value.joke
           : joke // ignore: cast_nullable_to_non_nullable
               as Joke,
@@ -327,6 +361,7 @@ class __$LoadSuccessCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $JokeCopyWith<$Res> get joke {
     return $JokeCopyWith<$Res>(_value.joke, (value) {
       return _then(_value.copyWith(joke: value));
@@ -358,19 +393,19 @@ class _$_LoadSuccess with DiagnosticableTreeMixin implements _LoadSuccess {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _LoadSuccess &&
-            (identical(other.joke, joke) ||
-                const DeepCollectionEquality().equals(other.joke, joke)));
+        (other.runtimeType == runtimeType &&
+            other is _$_LoadSuccess &&
+            (identical(other.joke, joke) || other.joke == joke));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(joke);
+  int get hashCode => Object.hash(runtimeType, joke);
 
   @JsonKey(ignore: true)
   @override
-  _$LoadSuccessCopyWith<_LoadSuccess> get copyWith =>
-      __$LoadSuccessCopyWithImpl<_LoadSuccess>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_LoadSuccessCopyWith<_$_LoadSuccess> get copyWith =>
+      __$$_LoadSuccessCopyWithImpl<_$_LoadSuccess>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -381,6 +416,17 @@ class _$_LoadSuccess with DiagnosticableTreeMixin implements _LoadSuccess {
     required TResult Function() loadFailure,
   }) {
     return loadSuccess(joke);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadInProgress,
+    TResult? Function(Joke joke)? loadSuccess,
+    TResult? Function()? loadFailure,
+  }) {
+    return loadSuccess?.call(joke);
   }
 
   @override
@@ -411,6 +457,17 @@ class _$_LoadSuccess with DiagnosticableTreeMixin implements _LoadSuccess {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadInProgress value)? loadInProgress,
+    TResult? Function(_LoadSuccess value)? loadSuccess,
+    TResult? Function(_LoadFailure value)? loadFailure,
+  }) {
+    return loadSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_LoadInProgress value)? loadInProgress,
@@ -426,31 +483,28 @@ class _$_LoadSuccess with DiagnosticableTreeMixin implements _LoadSuccess {
 }
 
 abstract class _LoadSuccess implements RandomJokeState {
-  const factory _LoadSuccess(Joke joke) = _$_LoadSuccess;
+  const factory _LoadSuccess(final Joke joke) = _$_LoadSuccess;
 
-  Joke get joke => throw _privateConstructorUsedError;
+  Joke get joke;
   @JsonKey(ignore: true)
-  _$LoadSuccessCopyWith<_LoadSuccess> get copyWith =>
+  _$$_LoadSuccessCopyWith<_$_LoadSuccess> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$LoadFailureCopyWith<$Res> {
-  factory _$LoadFailureCopyWith(
-          _LoadFailure value, $Res Function(_LoadFailure) then) =
-      __$LoadFailureCopyWithImpl<$Res>;
+abstract class _$$_LoadFailureCopyWith<$Res> {
+  factory _$$_LoadFailureCopyWith(
+          _$_LoadFailure value, $Res Function(_$_LoadFailure) then) =
+      __$$_LoadFailureCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$LoadFailureCopyWithImpl<$Res>
-    extends _$RandomJokeStateCopyWithImpl<$Res>
-    implements _$LoadFailureCopyWith<$Res> {
-  __$LoadFailureCopyWithImpl(
-      _LoadFailure _value, $Res Function(_LoadFailure) _then)
-      : super(_value, (v) => _then(v as _LoadFailure));
-
-  @override
-  _LoadFailure get _value => super._value as _LoadFailure;
+class __$$_LoadFailureCopyWithImpl<$Res>
+    extends _$RandomJokeStateCopyWithImpl<$Res, _$_LoadFailure>
+    implements _$$_LoadFailureCopyWith<$Res> {
+  __$$_LoadFailureCopyWithImpl(
+      _$_LoadFailure _value, $Res Function(_$_LoadFailure) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -466,12 +520,13 @@ class _$_LoadFailure with DiagnosticableTreeMixin implements _LoadFailure {
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'RandomJokeState.loadFailure'));
+    properties.add(DiagnosticsProperty('type', 'RandomJokeState.loadFailure'));
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _LoadFailure);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_LoadFailure);
   }
 
   @override
@@ -486,6 +541,17 @@ class _$_LoadFailure with DiagnosticableTreeMixin implements _LoadFailure {
     required TResult Function() loadFailure,
   }) {
     return loadFailure();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadInProgress,
+    TResult? Function(Joke joke)? loadSuccess,
+    TResult? Function()? loadFailure,
+  }) {
+    return loadFailure?.call();
   }
 
   @override
@@ -516,6 +582,17 @@ class _$_LoadFailure with DiagnosticableTreeMixin implements _LoadFailure {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadInProgress value)? loadInProgress,
+    TResult? Function(_LoadSuccess value)? loadSuccess,
+    TResult? Function(_LoadFailure value)? loadFailure,
+  }) {
+    return loadFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_LoadInProgress value)? loadInProgress,
@@ -535,22 +612,15 @@ abstract class _LoadFailure implements RandomJokeState {
 }
 
 /// @nodoc
-class _$RandomJokeEventTearOff {
-  const _$RandomJokeEventTearOff();
-
-  _NewJokeEvent newJoke() {
-    return const _NewJokeEvent();
-  }
-}
-
-/// @nodoc
-const $RandomJokeEvent = _$RandomJokeEventTearOff();
-
-/// @nodoc
 mixin _$RandomJokeEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() newJoke,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? newJoke,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -565,6 +635,11 @@ mixin _$RandomJokeEvent {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_NewJokeEvent value)? newJoke,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_NewJokeEvent value)? newJoke,
     required TResult orElse(),
@@ -576,36 +651,34 @@ mixin _$RandomJokeEvent {
 abstract class $RandomJokeEventCopyWith<$Res> {
   factory $RandomJokeEventCopyWith(
           RandomJokeEvent value, $Res Function(RandomJokeEvent) then) =
-      _$RandomJokeEventCopyWithImpl<$Res>;
+      _$RandomJokeEventCopyWithImpl<$Res, RandomJokeEvent>;
 }
 
 /// @nodoc
-class _$RandomJokeEventCopyWithImpl<$Res>
+class _$RandomJokeEventCopyWithImpl<$Res, $Val extends RandomJokeEvent>
     implements $RandomJokeEventCopyWith<$Res> {
   _$RandomJokeEventCopyWithImpl(this._value, this._then);
 
-  final RandomJokeEvent _value;
   // ignore: unused_field
-  final $Res Function(RandomJokeEvent) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$NewJokeEventCopyWith<$Res> {
-  factory _$NewJokeEventCopyWith(
-          _NewJokeEvent value, $Res Function(_NewJokeEvent) then) =
-      __$NewJokeEventCopyWithImpl<$Res>;
+abstract class _$$_NewJokeEventCopyWith<$Res> {
+  factory _$$_NewJokeEventCopyWith(
+          _$_NewJokeEvent value, $Res Function(_$_NewJokeEvent) then) =
+      __$$_NewJokeEventCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$NewJokeEventCopyWithImpl<$Res>
-    extends _$RandomJokeEventCopyWithImpl<$Res>
-    implements _$NewJokeEventCopyWith<$Res> {
-  __$NewJokeEventCopyWithImpl(
-      _NewJokeEvent _value, $Res Function(_NewJokeEvent) _then)
-      : super(_value, (v) => _then(v as _NewJokeEvent));
-
-  @override
-  _NewJokeEvent get _value => super._value as _NewJokeEvent;
+class __$$_NewJokeEventCopyWithImpl<$Res>
+    extends _$RandomJokeEventCopyWithImpl<$Res, _$_NewJokeEvent>
+    implements _$$_NewJokeEventCopyWith<$Res> {
+  __$$_NewJokeEventCopyWithImpl(
+      _$_NewJokeEvent _value, $Res Function(_$_NewJokeEvent) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -621,12 +694,13 @@ class _$_NewJokeEvent with DiagnosticableTreeMixin implements _NewJokeEvent {
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'RandomJokeEvent.newJoke'));
+    properties.add(DiagnosticsProperty('type', 'RandomJokeEvent.newJoke'));
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _NewJokeEvent);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_NewJokeEvent);
   }
 
   @override
@@ -638,6 +712,14 @@ class _$_NewJokeEvent with DiagnosticableTreeMixin implements _NewJokeEvent {
     required TResult Function() newJoke,
   }) {
     return newJoke();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? newJoke,
+  }) {
+    return newJoke?.call();
   }
 
   @override
@@ -658,6 +740,14 @@ class _$_NewJokeEvent with DiagnosticableTreeMixin implements _NewJokeEvent {
     required TResult Function(_NewJokeEvent value) newJoke,
   }) {
     return newJoke(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_NewJokeEvent value)? newJoke,
+  }) {
+    return newJoke?.call(this);
   }
 
   @override

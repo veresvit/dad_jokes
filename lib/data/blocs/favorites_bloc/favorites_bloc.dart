@@ -12,35 +12,30 @@ class FavoritesBloc extends Bloc<FavoritesEvent, FavoritesState> {
   final FavoriteJokesRepo favoriteJokesRepo;
   FavoritesBloc({
     required this.favoriteJokesRepo,
-  }) : super(_Initial());
-
-  @override
-  Stream<FavoritesState> mapEventToState(FavoritesEvent event) async* {
-    yield* event.map(
-      load: _load,
-      add: _add,
-      remove: _remove,
-    );
+  }) : super(_Initial()) {
+    on<_LoadEvent>((event, emit) => _load(event, emit));
+    on<_AddEvent>((event, emit) => _add(event, emit));
+    on<_RemoveEvent>((event, emit) => _remove(event, emit));
   }
 
-  Stream<FavoritesState> _load(_LoadEvent event) async* {
-    yield FavoritesState.loadInProgress();
+  Future<void> _load(_LoadEvent event, Emitter<FavoritesState> emit) async {
+    emit(FavoritesState.loadInProgress());
     try {
       final favoriteJokes = favoriteJokesRepo.jokes;
-      yield FavoritesState.loadSuccess(favoriteJokes);
+      emit(FavoritesState.loadSuccess(favoriteJokes));
     } catch (e, stck) {
       debugPrint('$e: $stck');
-      yield FavoritesState.loadFailure();
+      emit(FavoritesState.loadFailure());
     }
   }
 
-  Stream<FavoritesState> _add(_AddEvent event) async* {
+  Future<void> _add(_AddEvent event, Emitter<FavoritesState> emit) async {
     favoriteJokesRepo.add(event.joke);
-    yield FavoritesState.loadSuccess(favoriteJokesRepo.jokes);
+    emit(FavoritesState.loadSuccess(favoriteJokesRepo.jokes));
   }
 
-  Stream<FavoritesState> _remove(_RemoveEvent event) async* {
+  Future<void> _remove(_RemoveEvent event, Emitter<FavoritesState> emit) async {
     favoriteJokesRepo.remove(event.joke);
-    yield FavoritesState.loadSuccess(favoriteJokesRepo.jokes);
+    emit(FavoritesState.loadSuccess(favoriteJokesRepo.jokes));
   }
 }
